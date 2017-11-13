@@ -1,4 +1,4 @@
-zclass CreateInstitutionsInstContacts < ActiveRecord::Migration[5.1]
+class CreateInstitutionsInstContacts < ActiveRecord::Migration[5.1]
   def change
     create_table :institutions_inst_contacts do |t|
     	t.belongs_to :institution, index: true

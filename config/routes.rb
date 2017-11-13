@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :teachers
   resources :tesda_courses
   resources :tesda_course_sectors
   resources :institutions

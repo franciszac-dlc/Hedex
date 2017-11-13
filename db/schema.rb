@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113065345) do
+ActiveRecord::Schema.define(version: 20171113073437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20171113065345) do
     t.string "cong_distr_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "institutions_tesda_courses", force: :cascade do |t|
+    t.bigint "institution_id"
+    t.bigint "tesda_course_id"
+    t.index ["institution_id"], name: "index_institutions_tesda_courses_on_institution_id"
+    t.index ["tesda_course_id"], name: "index_institutions_tesda_courses_on_tesda_course_id"
   end
 
   create_table "teachers", force: :cascade do |t|

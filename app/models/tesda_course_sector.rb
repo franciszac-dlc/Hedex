@@ -1,3 +1,3 @@
 class TesdaCourseSector < ApplicationRecord
-  has_many :TESDA_Course
+  has_many :tesda_course
 end

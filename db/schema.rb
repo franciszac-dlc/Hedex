@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113064043) do
+ActiveRecord::Schema.define(version: 20171113065345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,13 @@ ActiveRecord::Schema.define(version: 20171113064043) do
     t.string "t_lnamt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "teachers_tesda_courses", force: :cascade do |t|
+    t.bigint "teacher_id"
+    t.bigint "tesda_course_id"
+    t.index ["teacher_id"], name: "index_teachers_tesda_courses_on_teacher_id"
+    t.index ["tesda_course_id"], name: "index_teachers_tesda_courses_on_tesda_course_id"
   end
 
   create_table "tesda_course_sectors", force: :cascade do |t|

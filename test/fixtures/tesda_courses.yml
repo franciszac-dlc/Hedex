@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tc_name: MyString
+  tc_hrs_dur: 1
+  tesda_course_sector: one
+
+two:
+  tc_name: MyString
+  tc_hrs_dur: 1
+  tesda_course_sector: two

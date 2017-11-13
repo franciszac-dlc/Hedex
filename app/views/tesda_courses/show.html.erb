@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tc name:</strong>
+  <%= @tesda_course.tc_name %>
+</p>
+
+<p>
+  <strong>Tc hrs dur:</strong>
+  <%= @tesda_course.tc_hrs_dur %>
+</p>
+
+<p>
+  <strong>Tesda course sector:</strong>
+  <%= @tesda_course.tesda_course_sector %>
+</p>
+
+<%= link_to 'Edit', edit_tesda_course_path(@tesda_course) %> |
+<%= link_to 'Back', tesda_courses_path %>

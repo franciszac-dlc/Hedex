@@ -1,0 +1,27 @@
+<%= form_with(model: tesda_course_sector, local: true) do |form| %>
+  <% if tesda_course_sector.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tesda_course_sector.errors.count, "error") %> prohibited this tesda_course_sector from being saved:</h2>
+
+      <ul>
+      <% tesda_course_sector.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tcs_name %>
+    <%= form.text_field :tcs_name, id: :tesda_course_sector_tcs_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tcs_desc %>
+    <%= form.text_field :tcs_desc, id: :tesda_course_sector_tcs_desc %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tesda Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tc name</th>
+      <th>Tc hrs dur</th>
+      <th>Tesda course sector</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tesda_courses.each do |tesda_course| %>
+      <tr>
+        <td><%= tesda_course.tc_name %></td>
+        <td><%= tesda_course.tc_hrs_dur %></td>
+        <td><%= tesda_course.tesda_course_sector %></td>
+        <td><%= link_to 'Show', tesda_course %></td>
+        <td><%= link_to 'Edit', edit_tesda_course_path(tesda_course) %></td>
+        <td><%= link_to 'Destroy', tesda_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tesda Course', new_tesda_course_path %>

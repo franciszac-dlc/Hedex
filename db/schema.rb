@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113040815) do
+ActiveRecord::Schema.define(version: 20171113062102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,4 +26,21 @@ ActiveRecord::Schema.define(version: 20171113040815) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tesda_course_sectors", force: :cascade do |t|
+    t.string "tcs_name"
+    t.string "tcs_desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tesda_courses", force: :cascade do |t|
+    t.string "tc_name"
+    t.integer "tc_hrs_dur"
+    t.bigint "tesda_course_sector_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tesda_course_sector_id"], name: "index_tesda_courses_on_tesda_course_sector_id"
+  end
+
+  add_foreign_key "tesda_courses", "tesda_course_sectors"
 end

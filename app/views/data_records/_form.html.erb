@@ -1,0 +1,52 @@
+<%= form_with(model: data_record, local: true) do |form| %>
+  <% if data_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(data_record.errors.count, "error") %> prohibited this data_record from being saved:</h2>
+
+      <ul>
+      <% data_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :institution_id %>
+    <%= form.text_field :institution_id, id: :data_record_institution_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_date %>
+    <%= form.date_select :release_date, id: :data_record_release_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acadyr_termno %>
+    <%= form.text_field :acadyr_termno, id: :data_record_acadyr_termno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stud_count %>
+    <%= form.text_field :stud_count, id: :data_record_stud_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enrolled %>
+    <%= form.text_field :enrolled, id: :data_record_enrolled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :graduated %>
+    <%= form.text_field :graduated, id: :data_record_graduated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost_per_stud %>
+    <%= form.text_field :cost_per_stud, id: :data_record_cost_per_stud %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

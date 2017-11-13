@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  institution: one
+  release_date: 2017-11-13
+  acadyr_termno: MyString
+  stud_count: 
+  enrolled: 
+  graduated: 
+  cost_per_stud: 1.5
+
+two:
+  institution: two
+  release_date: 2017-11-13
+  acadyr_termno: MyString
+  stud_count: 
+  enrolled: 
+  graduated: 
+  cost_per_stud: 1.5

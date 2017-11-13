@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :data_records
+  resources :tuitions
+  resources :faculty_headcounts
+  resources :regional_data_records
+  resources :regions
   devise_for :principals, :controllers => { registrations: 'registrations' }
   root to: 'institutions#index'
   resources :sections

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  institution: one
+  release_date: 2017-11-13
+  acadyr_termno: MyString
+  bacc: 1
+  ms_ma: 1
+  phd: 1
+  maintainer: MyString
+
+two:
+  institution: two
+  release_date: 2017-11-13
+  acadyr_termno: MyString
+  bacc: 1
+  ms_ma: 1
+  phd: 1
+  maintainer: MyString

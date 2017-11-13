@@ -1,0 +1,52 @@
+<%= form_with(model: faculty_headcount, local: true) do |form| %>
+  <% if faculty_headcount.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(faculty_headcount.errors.count, "error") %> prohibited this faculty_headcount from being saved:</h2>
+
+      <ul>
+      <% faculty_headcount.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :institution_id %>
+    <%= form.text_field :institution_id, id: :faculty_headcount_institution_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_date %>
+    <%= form.date_select :release_date, id: :faculty_headcount_release_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acadyr_termno %>
+    <%= form.text_field :acadyr_termno, id: :faculty_headcount_acadyr_termno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bacc %>
+    <%= form.number_field :bacc, id: :faculty_headcount_bacc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ms_ma %>
+    <%= form.number_field :ms_ma, id: :faculty_headcount_ms_ma %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phd %>
+    <%= form.number_field :phd, id: :faculty_headcount_phd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maintainer %>
+    <%= form.text_field :maintainer, id: :faculty_headcount_maintainer %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Regional Data Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Release date</th>
+      <th>Acadyr</th>
+      <th>Cost per stud</th>
+      <th>Private nonsec</th>
+      <th>Private sec</th>
+      <th>Special hei</th>
+      <th>Other govt schools</th>
+      <th>Ched supervised institution</th>
+      <th>Local colleges and uni</th>
+      <th>Sucs main</th>
+      <th>Integer</th>
+      <th>Sucs sat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regional_data_records.each do |regional_data_record| %>
+      <tr>
+        <td><%= regional_data_record.region %></td>
+        <td><%= regional_data_record.release_date %></td>
+        <td><%= regional_data_record.acadyr %></td>
+        <td><%= regional_data_record.cost_per_stud %></td>
+        <td><%= regional_data_record.private_nonsec %></td>
+        <td><%= regional_data_record.private_sec %></td>
+        <td><%= regional_data_record.special_HEI %></td>
+        <td><%= regional_data_record.other_govt_schools %></td>
+        <td><%= regional_data_record.ched_supervised_institution %></td>
+        <td><%= regional_data_record.local_colleges_and_uni %></td>
+        <td><%= regional_data_record.SUCs_main %></td>
+        <td><%= regional_data_record.integer %></td>
+        <td><%= regional_data_record.SUCs_sat %></td>
+        <td><%= link_to 'Show', regional_data_record %></td>
+        <td><%= link_to 'Edit', edit_regional_data_record_path(regional_data_record) %></td>
+        <td><%= link_to 'Destroy', regional_data_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Regional Data Record', new_regional_data_record_path %>

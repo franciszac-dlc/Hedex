@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @data_record.institution %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @data_record.release_date %>
+</p>
+
+<p>
+  <strong>Acadyr termno:</strong>
+  <%= @data_record.acadyr_termno %>
+</p>
+
+<p>
+  <strong>Stud count:</strong>
+  <%= @data_record.stud_count %>
+</p>
+
+<p>
+  <strong>Enrolled:</strong>
+  <%= @data_record.enrolled %>
+</p>
+
+<p>
+  <strong>Graduated:</strong>
+  <%= @data_record.graduated %>
+</p>
+
+<p>
+  <strong>Cost per stud:</strong>
+  <%= @data_record.cost_per_stud %>
+</p>
+
+<%= link_to 'Edit', edit_data_record_path(@data_record) %> |
+<%= link_to 'Back', data_records_path %>

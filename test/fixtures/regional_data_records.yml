@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  region: one
+  release_date: 2017-11-13
+  acadyr: 1
+  cost_per_stud: 1.5
+  private_nonsec: 1
+  private_sec: 1
+  special_HEI: 1
+  other_govt_schools: 1
+  ched_supervised_institution: 1
+  local_colleges_and_uni: 1
+  SUCs_main: MyString
+  integer: MyString
+  SUCs_sat: 1
+
+two:
+  region: two
+  release_date: 2017-11-13
+  acadyr: 1
+  cost_per_stud: 1.5
+  private_nonsec: 1
+  private_sec: 1
+  special_HEI: 1
+  other_govt_schools: 1
+  ched_supervised_institution: 1
+  local_colleges_and_uni: 1
+  SUCs_main: MyString
+  integer: MyString
+  SUCs_sat: 1

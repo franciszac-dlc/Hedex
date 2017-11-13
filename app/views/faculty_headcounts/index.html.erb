@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Faculty Headcounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Institution</th>
+      <th>Release date</th>
+      <th>Acadyr termno</th>
+      <th>Bacc</th>
+      <th>Ms ma</th>
+      <th>Phd</th>
+      <th>Maintainer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faculty_headcounts.each do |faculty_headcount| %>
+      <tr>
+        <td><%= faculty_headcount.institution %></td>
+        <td><%= faculty_headcount.release_date %></td>
+        <td><%= faculty_headcount.acadyr_termno %></td>
+        <td><%= faculty_headcount.bacc %></td>
+        <td><%= faculty_headcount.ms_ma %></td>
+        <td><%= faculty_headcount.phd %></td>
+        <td><%= faculty_headcount.maintainer %></td>
+        <td><%= link_to 'Show', faculty_headcount %></td>
+        <td><%= link_to 'Edit', edit_faculty_headcount_path(faculty_headcount) %></td>
+        <td><%= link_to 'Destroy', faculty_headcount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Faculty Headcount', new_faculty_headcount_path %>

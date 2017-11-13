@@ -1,2 +1,0 @@
-class InstitutionsInstContact < ApplicationRecord
-end

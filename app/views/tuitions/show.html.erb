@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @tuition.institution %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @tuition.release_date %>
+</p>
+
+<p>
+  <strong>Acadyr termno:</strong>
+  <%= @tuition.acadyr_termno %>
+</p>
+
+<p>
+  <strong>Bacc:</strong>
+  <%= @tuition.bacc %>
+</p>
+
+<p>
+  <strong>Ms ma:</strong>
+  <%= @tuition.ms_ma %>
+</p>
+
+<p>
+  <strong>Phd:</strong>
+  <%= @tuition.phd %>
+</p>
+
+<%= link_to 'Edit', edit_tuition_path(@tuition) %> |
+<%= link_to 'Back', tuitions_path %>

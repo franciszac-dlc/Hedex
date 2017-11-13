@@ -1,0 +1,82 @@
+<%= form_with(model: regional_data_record, local: true) do |form| %>
+  <% if regional_data_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(regional_data_record.errors.count, "error") %> prohibited this regional_data_record from being saved:</h2>
+
+      <ul>
+      <% regional_data_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :region_id %>
+    <%= form.text_field :region_id, id: :regional_data_record_region_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_date %>
+    <%= form.date_select :release_date, id: :regional_data_record_release_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acadyr %>
+    <%= form.number_field :acadyr, id: :regional_data_record_acadyr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost_per_stud %>
+    <%= form.text_field :cost_per_stud, id: :regional_data_record_cost_per_stud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :private_nonsec %>
+    <%= form.number_field :private_nonsec, id: :regional_data_record_private_nonsec %>
+  </div>
+
+  <div class="field">
+    <%= form.label :private_sec %>
+    <%= form.number_field :private_sec, id: :regional_data_record_private_sec %>
+  </div>
+
+  <div class="field">
+    <%= form.label :special_HEI %>
+    <%= form.number_field :special_HEI, id: :regional_data_record_special_HEI %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_govt_schools %>
+    <%= form.number_field :other_govt_schools, id: :regional_data_record_other_govt_schools %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ched_supervised_institution %>
+    <%= form.number_field :ched_supervised_institution, id: :regional_data_record_ched_supervised_institution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :local_colleges_and_uni %>
+    <%= form.number_field :local_colleges_and_uni, id: :regional_data_record_local_colleges_and_uni %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SUCs_main %>
+    <%= form.text_field :SUCs_main, id: :regional_data_record_SUCs_main %>
+  </div>
+
+  <div class="field">
+    <%= form.label :integer %>
+    <%= form.text_field :integer, id: :regional_data_record_integer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SUCs_sat %>
+    <%= form.number_field :SUCs_sat, id: :regional_data_record_SUCs_sat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

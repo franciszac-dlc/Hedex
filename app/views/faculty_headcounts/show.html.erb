@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @faculty_headcount.institution %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @faculty_headcount.release_date %>
+</p>
+
+<p>
+  <strong>Acadyr termno:</strong>
+  <%= @faculty_headcount.acadyr_termno %>
+</p>
+
+<p>
+  <strong>Bacc:</strong>
+  <%= @faculty_headcount.bacc %>
+</p>
+
+<p>
+  <strong>Ms ma:</strong>
+  <%= @faculty_headcount.ms_ma %>
+</p>
+
+<p>
+  <strong>Phd:</strong>
+  <%= @faculty_headcount.phd %>
+</p>
+
+<p>
+  <strong>Maintainer:</strong>
+  <%= @faculty_headcount.maintainer %>
+</p>
+
+<%= link_to 'Edit', edit_faculty_headcount_path(@faculty_headcount) %> |
+<%= link_to 'Back', faculty_headcounts_path %>

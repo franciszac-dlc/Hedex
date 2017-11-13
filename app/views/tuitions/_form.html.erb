@@ -1,0 +1,47 @@
+<%= form_with(model: tuition, local: true) do |form| %>
+  <% if tuition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tuition.errors.count, "error") %> prohibited this tuition from being saved:</h2>
+
+      <ul>
+      <% tuition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :institution_id %>
+    <%= form.text_field :institution_id, id: :tuition_institution_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_date %>
+    <%= form.date_select :release_date, id: :tuition_release_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acadyr_termno %>
+    <%= form.text_field :acadyr_termno, id: :tuition_acadyr_termno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bacc %>
+    <%= form.text_field :bacc, id: :tuition_bacc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ms_ma %>
+    <%= form.text_field :ms_ma, id: :tuition_ms_ma %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phd %>
+    <%= form.text_field :phd, id: :tuition_phd %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

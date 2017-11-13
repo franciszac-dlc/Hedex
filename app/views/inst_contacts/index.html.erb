@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Inst Contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Institution</th>
+      <th>Contact num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inst_contacts.each do |inst_contact| %>
+      <tr>
+        <td><%= inst_contact.institution %></td>
+        <td><%= inst_contact.contact_num %></td>
+        <td><%= link_to 'Show', inst_contact %></td>
+        <td><%= link_to 'Edit', edit_inst_contact_path(inst_contact) %></td>
+        <td><%= link_to 'Destroy', inst_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inst Contact', new_inst_contact_path %>

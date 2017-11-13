@@ -1,0 +1,27 @@
+<%= form_with(model: inst_contact, local: true) do |form| %>
+  <% if inst_contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inst_contact.errors.count, "error") %> prohibited this inst_contact from being saved:</h2>
+
+      <ul>
+      <% inst_contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :institution_id %>
+    <%= form.text_field :institution_id, id: :inst_contact_institution_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_num %>
+    <%= form.text_field :contact_num, id: :inst_contact_contact_num %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

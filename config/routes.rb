@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :institutions_inst_contacts
+  resources :inst_contacts
   resources :data_records
   resources :tuitions
   resources :faculty_headcounts

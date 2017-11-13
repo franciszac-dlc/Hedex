@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :principals, :controllers => { registrations: 'registrations' }
+  root to: 'institutions#index'
   resources :sections
   resources :teachers
   resources :tesda_courses

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113080228) do
+ActiveRecord::Schema.define(version: 20171113095457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,24 @@ ActiveRecord::Schema.define(version: 20171113080228) do
     t.index ["tesda_course_id"], name: "index_institutions_tesda_courses_on_tesda_course_id"
   end
 
+  create_table "principals", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "p_name"
+    t.index ["email"], name: "index_principals_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_principals_on_reset_password_token", unique: true
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string "name"
     t.integer "head_count"
@@ -41,7 +59,9 @@ ActiveRecord::Schema.define(version: 20171113080228) do
     t.bigint "institution_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "principal_id"
     t.index ["institution_id"], name: "index_sections_on_institution_id"
+    t.index ["principal_id"], name: "index_sections_on_principal_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -50,6 +70,8 @@ ActiveRecord::Schema.define(version: 20171113080228) do
     t.string "t_lnamt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "principal_id"
+    t.index ["principal_id"], name: "index_teachers_on_principal_id"
   end
 
   create_table "teachers_sections", force: :cascade do |t|
@@ -71,6 +93,8 @@ ActiveRecord::Schema.define(version: 20171113080228) do
     t.string "tcs_desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "principal_id"
+    t.index ["principal_id"], name: "index_tesda_course_sectors_on_principal_id"
   end
 
   create_table "tesda_courses", force: :cascade do |t|
@@ -79,9 +103,15 @@ ActiveRecord::Schema.define(version: 20171113080228) do
     t.bigint "tesda_course_sector_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "principal_id"
+    t.index ["principal_id"], name: "index_tesda_courses_on_principal_id"
     t.index ["tesda_course_sector_id"], name: "index_tesda_courses_on_tesda_course_sector_id"
   end
 
   add_foreign_key "sections", "institutions"
+  add_foreign_key "sections", "principals"
+  add_foreign_key "teachers", "principals"
+  add_foreign_key "tesda_course_sectors", "principals"
+  add_foreign_key "tesda_courses", "principals"
   add_foreign_key "tesda_courses", "tesda_course_sectors"
 end

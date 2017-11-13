@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+  before_action :authenticate_principal!
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   # GET /teachers

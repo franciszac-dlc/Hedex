@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116110408) do
+ActiveRecord::Schema.define(version: 20171116131619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,13 +58,8 @@ ActiveRecord::Schema.define(version: 20171116110408) do
     t.string "cong_distr_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "institutions_inst_contacts", force: :cascade do |t|
-    t.bigint "institution_id"
-    t.bigint "inst_contact_id"
-    t.index ["inst_contact_id"], name: "index_institutions_inst_contacts_on_inst_contact_id"
-    t.index ["institution_id"], name: "index_institutions_inst_contacts_on_institution_id"
+    t.bigint "region_id"
+    t.index ["region_id"], name: "index_institutions_on_region_id"
   end
 
   create_table "institutions_tesda_courses", force: :cascade do |t|
@@ -184,6 +179,7 @@ ActiveRecord::Schema.define(version: 20171116110408) do
   add_foreign_key "data_records", "institutions"
   add_foreign_key "faculty_headcounts", "institutions"
   add_foreign_key "inst_contacts", "institutions"
+  add_foreign_key "institutions", "regions"
   add_foreign_key "regional_data_records", "regions"
   add_foreign_key "sections", "institutions"
   add_foreign_key "sections", "principals"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116084720) do
+ActiveRecord::Schema.define(version: 20171116110408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,7 +104,6 @@ ActiveRecord::Schema.define(version: 20171116084720) do
     t.integer "ched_supervised_institution"
     t.integer "local_colleges_and_uni"
     t.string "SUCs_main"
-    t.string "integer"
     t.integer "SUCs_sat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -159,8 +158,6 @@ ActiveRecord::Schema.define(version: 20171116084720) do
     t.string "tcs_desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "principal_id"
-    t.index ["principal_id"], name: "index_tesda_course_sectors_on_principal_id"
   end
 
   create_table "tesda_courses", force: :cascade do |t|
@@ -169,8 +166,6 @@ ActiveRecord::Schema.define(version: 20171116084720) do
     t.bigint "tesda_course_sector_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "principal_id"
-    t.index ["principal_id"], name: "index_tesda_courses_on_principal_id"
     t.index ["tesda_course_sector_id"], name: "index_tesda_courses_on_tesda_course_sector_id"
   end
 
@@ -193,8 +188,6 @@ ActiveRecord::Schema.define(version: 20171116084720) do
   add_foreign_key "sections", "institutions"
   add_foreign_key "sections", "principals"
   add_foreign_key "teachers", "principals"
-  add_foreign_key "tesda_course_sectors", "principals"
-  add_foreign_key "tesda_courses", "principals"
   add_foreign_key "tesda_courses", "tesda_course_sectors"
   add_foreign_key "tuitions", "institutions"
 end

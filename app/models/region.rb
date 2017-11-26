@@ -1,4 +1,4 @@
 class Region < ApplicationRecord
-	has_many :regional_data_record
-	has_many :institution
+  has_many :regional_data_records
+  has_many :institutions
 end

@@ -1,0 +1,12 @@
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (1, 'John Ketchum Tablefloorpen', 'jktable123@yahoo.com', 'asdfdsasd', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (2, 'Jade Spender Ocampo', 'jAdEzz@hotmail.com', 'sdfkjkjdfsjdsfg', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (3, 'Ash Alandy Peralta', 'ashap@gmail.com', 'wasdfdsfsd', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (4, 'Jake Asdfghjkl Peralta', 'holtisarobot@gmail.com', 'asdbdfs', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (5, 'Sebastian Ketchum Ramirez', 'whatanemail@yahoo.com', 'dsfsdsd', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (6, 'Ron Unfakename Mario', 'totallyrealemailbro@hotmail.com', 'wfgdfcsadf', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (7, 'Pauline Dijkstra Doofenshmirtz', 'shortestpathtoevil@gmail.com', 'fdfgbvdfgsd', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (8, 'Anne Knuth Ablog', 'cantthinkofmoreemails@yahoo.com', 'sdfdsfsf', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (9, 'Carl Holmes Avelino', 'how2writemail@gmail.com', 'sdsadsdad', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (10, 'Anne Asdfghjkl Holmes', 'why@yahoo.com', 'sdfcdsfsd', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (11, 'Candace Alandy Milverton', 'cam@yahoo.com', 'asdfsdads', '2017-11-16', '2017-11-16');
+INSERT INTO principals (id, p_name, email, encrypted_password, created_at, updated_at) VALUES (12, 'Sean Arguelles Bellinger', 'lastemailpls@yahoo.com', 'asdcxdscds', '2017-11-16', '2017-11-16');

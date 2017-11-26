@@ -1,13 +1,38 @@
 # README
 
+This README contains steps on setting up the application.
+
+## Rails setup
+
+1. Install rbenv (and ruby-build, a plugin for rbenv)
+
+2. Run the following commands to install Ruby
+```
+rbenv install 2.4.0
+rbenv global 2.4.0
+```
+
+3. Run the following commands to install Rails and other dependencies
+```
+gem install rails
+gem install bundler
+bundle install
+```
+
+4. Setup the database (steps below)
+
+5. Run the website with `rails s`, and go to `localhost:3000` in the web browser.
+
+6. View the possible links with `rails routes`. The ones labeled with `GET` are the ones you can type into the browser URL.
+
 ## Database setup
 
-1. Install PostgreSQL (idk the exact installation process sorry)
+1. Install PostgreSQL (installation process depends on OS, sorry)
 
 2. Enter a Postgres shell session
 ```
-  sudo su - postgres
-  psql
+$ sudo su - postgres
+$ psql
 ```
 
 3. Setup the role
@@ -23,9 +48,9 @@
   exit
 ```
 
-5. Create the databases using the new user
+5. Create the databases using the new user (you can try skipping this step since the databases might be created below)
 ```
-  psql postgres -U hedex_user
+$ psql postgres -U hedex_user
   DROP DATABASE IF EXISTS hedex_development;
   CREATE DATABASE hedex_development;
   DROP DATABASE IF EXISTS hedex_test;
@@ -34,10 +59,11 @@
   CREATE DATABASE hedex_production;
 ```
 
-## Dumping the database
+## Seeding the database
 
-Run the following script:
+Run the following in the terminal:
 ```
-  sudo -H -u postgres pg_dump -s hedex_development > ~/dump.sql
-  sudo mv ~/dump.sql /full/directory/you/want/
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
 ```

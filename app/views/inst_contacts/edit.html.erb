@@ -2,5 +2,5 @@
 
 <%= render 'form', inst_contact: @inst_contact %>
 
-<%= link_to 'Show', @inst_contact %> |
-<%= link_to 'Back', inst_contacts_path %>
+<%= link_to 'Show', [@institution, @inst_contact] %> |
+<%= link_to 'Back', institution_inst_contacts_path %>

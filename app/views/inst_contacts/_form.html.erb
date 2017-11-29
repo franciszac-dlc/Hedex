@@ -1,4 +1,4 @@
-<%= form_with(model: inst_contact, local: true) do |form| %>
+<%= form_for([@institution, inst_contact], local: true) do |form| %>
   <% if inst_contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(inst_contact.errors.count, "error") %> prohibited this inst_contact from being saved:</h2>

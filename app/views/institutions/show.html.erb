@@ -30,6 +30,8 @@
 <%= link_to 'Edit', edit_institution_path(@institution) %> |
 <%= link_to 'Back', institutions_path %>
 </br>
+<%= link_to 'Contacts', [@institution, :inst_contacts] %>
+</br>
 <%= link_to 'Data Records', [@institution, :data_records] %> |
 <%= link_to 'Tuitions', [@institution, :tuitions] %> |
 <%= link_to 'Faculty Headcounts', [@institution, :faculty_headcounts] %>

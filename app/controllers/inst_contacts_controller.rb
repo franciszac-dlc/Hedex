@@ -1,10 +1,11 @@
 class InstContactsController < ApplicationController
+  before_action :set_institution
   before_action :set_inst_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /inst_contacts
   # GET /inst_contacts.json
   def index
-    @inst_contacts = InstContact.all
+    @inst_contacts = @institution.inst_contacts.all
   end
 
   # GET /inst_contacts/1
@@ -14,7 +15,7 @@ class InstContactsController < ApplicationController
 
   # GET /inst_contacts/new
   def new
-    @inst_contact = InstContact.new
+    @inst_contact = @institution.inst_contacts.new
   end
 
   # GET /inst_contacts/1/edit
@@ -28,7 +29,7 @@ class InstContactsController < ApplicationController
 
     respond_to do |format|
       if @inst_contact.save
-        format.html { redirect_to @inst_contact, notice: 'Inst contact was successfully created.' }
+        format.html { redirect_to [@institution, @inst_contact], notice: 'Inst contact was successfully created.' }
         format.json { render :show, status: :created, location: @inst_contact }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class InstContactsController < ApplicationController
   def update
     respond_to do |format|
       if @inst_contact.update(inst_contact_params)
-        format.html { redirect_to @inst_contact, notice: 'Inst contact was successfully updated.' }
+        format.html { redirect_to [@institution, @inst_contact], notice: 'Inst contact was successfully updated.' }
         format.json { render :show, status: :ok, location: @inst_contact }
       else
         format.html { render :edit }
@@ -56,13 +57,16 @@ class InstContactsController < ApplicationController
   def destroy
     @inst_contact.destroy
     respond_to do |format|
-      format.html { redirect_to inst_contacts_url, notice: 'Inst contact was successfully destroyed.' }
+      format.html { redirect_to institution_inst_contacts_url, notice: 'Inst contact was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_institution
+      @institution = Institution.find(params[:institution_id])
+    end
     def set_inst_contact
       @inst_contact = InstContact.find(params[:id])
     end

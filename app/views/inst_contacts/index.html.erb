@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Inst Contacts</h1>
+<h1><%= @institution.name %></h1>
+<h2>Contact numbers</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Institution</th>
       <th>Contact num</th>
       <th colspan="3"></th>
     </tr>
@@ -14,11 +14,10 @@
   <tbody>
     <% @inst_contacts.each do |inst_contact| %>
       <tr>
-        <td><%= inst_contact.institution %></td>
         <td><%= inst_contact.contact_num %></td>
-        <td><%= link_to 'Show', inst_contact %></td>
-        <td><%= link_to 'Edit', edit_inst_contact_path(inst_contact) %></td>
-        <td><%= link_to 'Destroy', inst_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [@institution, inst_contact] %></td>
+        <td><%= link_to 'Edit', edit_institution_inst_contact_path(@institution, inst_contact) %></td>
+        <td><%= link_to 'Destroy', [@institution, inst_contact], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Inst Contact', new_inst_contact_path %>
+<%= link_to 'New Inst Contact', new_institution_inst_contact_path %>

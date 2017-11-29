@@ -2,7 +2,7 @@
 
 <p>
   <strong>Region:</strong>
-  <%= @regional_data_record.region %>
+  <%= @regional_data_record.region.region_name %>
 </p>
 
 <p>
@@ -56,14 +56,9 @@
 </p>
 
 <p>
-  <strong>Integer:</strong>
-  <%= @regional_data_record.integer %>
-</p>
-
-<p>
   <strong>Sucs sat:</strong>
   <%= @regional_data_record.SUCs_sat %>
 </p>
 
-<%= link_to 'Edit', edit_regional_data_record_path(@regional_data_record) %> |
-<%= link_to 'Back', regional_data_records_path %>
+<%= link_to 'Edit', edit_region_regional_data_record_path(@region, @regional_data_record) %> |
+<%= link_to 'Back', region_regional_data_records_path %>

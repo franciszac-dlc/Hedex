@@ -1,4 +1,4 @@
-<%= form_with(model: regional_data_record, local: true) do |form| %>
+<%= form_for([@region, regional_data_record], local: true) do |form| %>
   <% if regional_data_record.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(regional_data_record.errors.count, "error") %> prohibited this regional_data_record from being saved:</h2>
@@ -64,11 +64,6 @@
   <div class="field">
     <%= form.label :SUCs_main %>
     <%= form.text_field :SUCs_main, id: :regional_data_record_SUCs_main %>
-  </div>
-
-  <div class="field">
-    <%= form.label :integer %>
-    <%= form.text_field :integer, id: :regional_data_record_integer %>
   </div>
 
   <div class="field">

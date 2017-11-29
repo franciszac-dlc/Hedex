@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tuitions</h1>
+<h2>Institution: <%= @institution.name %></h2>
 
 <table>
   <thead>
     <tr>
-      <th>Institution</th>
       <th>Release date</th>
       <th>Acadyr termno</th>
       <th>Bacc</th>
@@ -18,7 +18,6 @@
   <tbody>
     <% @tuitions.each do |tuition| %>
       <tr>
-        <td><%= tuition.institution %></td>
         <td><%= tuition.release_date %></td>
         <td><%= tuition.acadyr_termno %></td>
         <td><%= tuition.bacc %></td>
@@ -34,4 +33,5 @@
 
 <br>
 
-<%= link_to 'New Tuition', new_institution_tuition_path %>
+<%= link_to 'New Tuition', new_institution_tuition_path %> |
+<%= link_to 'Back', @institution %>

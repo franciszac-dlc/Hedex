@@ -1,4 +1,4 @@
-<%= form_with(model: tuition, local: true) do |form| %>
+<%= form_for([@institution, tuition], local: true) do |form| %>
   <% if tuition.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(tuition.errors.count, "error") %> prohibited this tuition from being saved:</h2>

@@ -2,5 +2,5 @@
 
 <%= render 'form', tuition: @tuition %>
 
-<%= link_to 'Show', @tuition %> |
-<%= link_to 'Back', tuitions_path %>
+<%= link_to 'Show', [@institution, @tuition] %> |
+<%= link_to 'Back', institution_tuitions_path %>

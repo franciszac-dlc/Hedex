@@ -24,9 +24,9 @@
         <td><%= tuition.bacc %></td>
         <td><%= tuition.ms_ma %></td>
         <td><%= tuition.phd %></td>
-        <td><%= link_to 'Show', tuition %></td>
-        <td><%= link_to 'Edit', edit_tuition_path(tuition) %></td>
-        <td><%= link_to 'Destroy', tuition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [@institution, tuition] %></td>
+        <td><%= link_to 'Edit', edit_institution_tuition_path(@institution, tuition) %></td>
+        <td><%= link_to 'Destroy', [@institution, tuition], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Tuition', new_tuition_path %>
+<%= link_to 'New Tuition', new_institution_tuition_path %>

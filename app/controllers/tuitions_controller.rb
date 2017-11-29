@@ -1,10 +1,11 @@
 class TuitionsController < ApplicationController
+  before_action :set_institution
   before_action :set_tuition, only: [:show, :edit, :update, :destroy]
 
   # GET /tuitions
   # GET /tuitions.json
   def index
-    @tuitions = Tuition.all
+    @tuitions = @institution.tuitions.all
   end
 
   # GET /tuitions/1
@@ -14,7 +15,7 @@ class TuitionsController < ApplicationController
 
   # GET /tuitions/new
   def new
-    @tuition = Tuition.new
+    @tuition = @institution.tuitions.new
   end
 
   # GET /tuitions/1/edit
@@ -24,11 +25,11 @@ class TuitionsController < ApplicationController
   # POST /tuitions
   # POST /tuitions.json
   def create
-    @tuition = Tuition.new(tuition_params)
+    @tuition = @institution.tuitions.new(tuition_params)
 
     respond_to do |format|
       if @tuition.save
-        format.html { redirect_to @tuition, notice: 'Tuition was successfully created.' }
+        format.html { redirect_to [@institution, @tuition], notice: 'Tuition was successfully created.' }
         format.json { render :show, status: :created, location: @tuition }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class TuitionsController < ApplicationController
   def update
     respond_to do |format|
       if @tuition.update(tuition_params)
-        format.html { redirect_to @tuition, notice: 'Tuition was successfully updated.' }
+        format.html { redirect_to [@institution, @tuition], notice: 'Tuition was successfully updated.' }
         format.json { render :show, status: :ok, location: @tuition }
       else
         format.html { render :edit }
@@ -56,13 +57,16 @@ class TuitionsController < ApplicationController
   def destroy
     @tuition.destroy
     respond_to do |format|
-      format.html { redirect_to tuitions_url, notice: 'Tuition was successfully destroyed.' }
+      format.html { redirect_to institution_tuitions_url, notice: 'Tuition was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_institution
+      @institution = Institution.find(params[:institution_id])
+    end
     def set_tuition
       @tuition = Tuition.find(params[:id])
     end

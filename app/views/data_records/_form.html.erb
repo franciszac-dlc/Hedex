@@ -1,4 +1,4 @@
-<%= form_with(model: data_record, local: true) do |form| %>
+<%= form_for([@institution, data_record], local: true) do |form| %>
   <% if data_record.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(data_record.errors.count, "error") %> prohibited this data_record from being saved:</h2>

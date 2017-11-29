@@ -1,10 +1,11 @@
 class DataRecordsController < ApplicationController
+  before_action :set_institution
   before_action :set_data_record, only: [:show, :edit, :update, :destroy]
 
   # GET /data_records
   # GET /data_records.json
   def index
-    @data_records = DataRecord.all
+    @data_records = @institution.data_records.all
   end
 
   # GET /data_records/1
@@ -14,7 +15,7 @@ class DataRecordsController < ApplicationController
 
   # GET /data_records/new
   def new
-    @data_record = DataRecord.new
+    @data_record = @institution.data_records.new
   end
 
   # GET /data_records/1/edit
@@ -24,11 +25,11 @@ class DataRecordsController < ApplicationController
   # POST /data_records
   # POST /data_records.json
   def create
-    @data_record = DataRecord.new(data_record_params)
+    @data_record = @institution.data_records.new(data_record_params)
 
     respond_to do |format|
       if @data_record.save
-        format.html { redirect_to @data_record, notice: 'Data record was successfully created.' }
+        format.html { redirect_to [@institution, @data_record], notice: 'Data record was successfully created.' }
         format.json { render :show, status: :created, location: @data_record }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class DataRecordsController < ApplicationController
   def update
     respond_to do |format|
       if @data_record.update(data_record_params)
-        format.html { redirect_to @data_record, notice: 'Data record was successfully updated.' }
+        format.html { redirect_to [@institution, @data_record], notice: 'Data record was successfully updated.' }
         format.json { render :show, status: :ok, location: @data_record }
       else
         format.html { render :edit }
@@ -56,13 +57,16 @@ class DataRecordsController < ApplicationController
   def destroy
     @data_record.destroy
     respond_to do |format|
-      format.html { redirect_to data_records_url, notice: 'Data record was successfully destroyed.' }
+      format.html { redirect_to [@institution, :data_records], notice: 'Data record was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_institution
+      @institution = Institution.find(params[:institution_id])
+    end
     def set_data_record
       @data_record = DataRecord.find(params[:id])
     end

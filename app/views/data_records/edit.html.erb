@@ -2,5 +2,5 @@
 
 <%= render 'form', data_record: @data_record %>
 
-<%= link_to 'Show', @data_record %> |
-<%= link_to 'Back', data_records_path %>
+<%= link_to 'Show', [@institution, @data_record] %> |
+<%= link_to 'Back', institution_data_records_path %>

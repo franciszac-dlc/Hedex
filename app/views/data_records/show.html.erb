@@ -2,7 +2,7 @@
 
 <p>
   <strong>Institution:</strong>
-  <%= @data_record.institution %>
+  <%= @data_record.institution.name %>
 </p>
 
 <p>
@@ -35,5 +35,5 @@
   <%= @data_record.cost_per_stud %>
 </p>
 
-<%= link_to 'Edit', edit_data_record_path(@data_record) %> |
-<%= link_to 'Back', data_records_path %>
+<%= link_to 'Edit', edit_institution_data_record_path(@institution, @data_record) %> |
+<%= link_to 'Back', institution_data_records_path %>

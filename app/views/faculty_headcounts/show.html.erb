@@ -2,7 +2,7 @@
 
 <p>
   <strong>Institution:</strong>
-  <%= @faculty_headcount.institution %>
+  <%= @faculty_headcount.institution.name %>
 </p>
 
 <p>
@@ -35,5 +35,5 @@
   <%= @faculty_headcount.maintainer %>
 </p>
 
-<%= link_to 'Edit', edit_faculty_headcount_path(@faculty_headcount) %> |
-<%= link_to 'Back', faculty_headcounts_path %>
+<%= link_to 'Edit', edit_institution_faculty_headcount_path(@institution, @faculty_headcount) %> |
+<%= link_to 'Back', institution_faculty_headcounts_path %>

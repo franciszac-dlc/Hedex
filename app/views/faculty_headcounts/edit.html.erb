@@ -2,5 +2,5 @@
 
 <%= render 'form', faculty_headcount: @faculty_headcount %>
 
-<%= link_to 'Show', @faculty_headcount %> |
-<%= link_to 'Back', faculty_headcounts_path %>
+<%= link_to 'Show', [@institution, @faculty_headcount] %> |
+<%= link_to 'Back', institution_faculty_headcounts_path %>

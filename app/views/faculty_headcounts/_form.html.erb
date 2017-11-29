@@ -1,4 +1,4 @@
-<%= form_with(model: faculty_headcount, local: true) do |form| %>
+<%= form_for([@institution, faculty_headcount], local: true) do |form| %>
   <% if faculty_headcount.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(faculty_headcount.errors.count, "error") %> prohibited this faculty_headcount from being saved:</h2>

@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Faculty Headcounts</h1>
+<h2>Institution: <%= @institution.name %></h2>
 
 <table>
   <thead>
     <tr>
-      <th>Institution</th>
       <th>Release date</th>
       <th>Acadyr termno</th>
       <th>Bacc</th>
@@ -19,16 +19,15 @@
   <tbody>
     <% @faculty_headcounts.each do |faculty_headcount| %>
       <tr>
-        <td><%= faculty_headcount.institution %></td>
         <td><%= faculty_headcount.release_date %></td>
         <td><%= faculty_headcount.acadyr_termno %></td>
         <td><%= faculty_headcount.bacc %></td>
         <td><%= faculty_headcount.ms_ma %></td>
         <td><%= faculty_headcount.phd %></td>
         <td><%= faculty_headcount.maintainer %></td>
-        <td><%= link_to 'Show', faculty_headcount %></td>
-        <td><%= link_to 'Edit', edit_faculty_headcount_path(faculty_headcount) %></td>
-        <td><%= link_to 'Destroy', faculty_headcount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [@institution, faculty_headcount] %></td>
+        <td><%= link_to 'Edit', edit_institution_faculty_headcount_path(@institution, faculty_headcount) %></td>
+        <td><%= link_to 'Destroy', [@institution, faculty_headcount], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +35,5 @@
 
 <br>
 
-<%= link_to 'New Faculty Headcount', new_faculty_headcount_path %>
+<%= link_to 'New Faculty Headcount', new_institution_faculty_headcount_path %> |
+<%= link_to 'Back', @institution %>

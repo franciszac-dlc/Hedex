@@ -1,3 +1,5 @@
+SELECT setval('principals_id_seq', 13, true);
+
 INSERT INTO tesda_course_sectors (id, tcs_name, tcs_desc, created_at, updated_at) VALUES (1, 'Tourism', 'Courses related to hospitality, travel, and the promotion of travel.', '2017-11-16', '2017-11-16');
 
 INSERT INTO tesda_course_sectors (id, tcs_name, tcs_desc, created_at, updated_at) VALUES (2, 'Electrical & Electronics', 'Courses related to electricity and electronics.', '2017-11-16', '2017-11-16');
@@ -12,6 +14,8 @@ INSERT INTO tesda_course_sectors (id, tcs_name, tcs_desc, created_at, updated_at
 
 INSERT INTO tesda_course_sectors (id, tcs_name, tcs_desc, created_at, updated_at) VALUES (7, 'Social Community Development & Other Services', 'Helping society by promoting community wellbeing.', '2017-11-16', '2017-11-16');
 
+SELECT setval('tesda_course_sectors_id_seq', 8, true);
+
 INSERT INTO tesda_courses (id, tc_name, tc_hrs_dur, tesda_course_sector_id, created_at, updated_at) VALUES (1, 'Cookery NC II', 316, 1, '2017-11-16', '2017-11-16');
 INSERT INTO tesda_courses (id, tc_name, tc_hrs_dur, tesda_course_sector_id, created_at, updated_at) VALUES (2, 'Food & Beverage Services NC II', 356, 1, '2017-11-16', '2017-11-16');
 INSERT INTO tesda_courses (id, tc_name, tc_hrs_dur, tesda_course_sector_id, created_at, updated_at) VALUES (3, 'Housekeeping NC II', 436, 1, '2017-11-16', '2017-11-16');
@@ -25,6 +29,7 @@ INSERT INTO tesda_courses (id, tc_name, tc_hrs_dur, tesda_course_sector_id, crea
 INSERT INTO tesda_courses (id, tc_name, tc_hrs_dur, tesda_course_sector_id, created_at, updated_at) VALUES (11, 'Pharmacy Services NC II', 271, 4, '2017-11-16', '2017-11-16');
 INSERT INTO tesda_courses (id, tc_name, tc_hrs_dur, tesda_course_sector_id, created_at, updated_at) VALUES (12, 'Health Care Services NC II', 996, 7, '2017-11-16', '2017-11-16');
 INSERT INTO tesda_courses (id, tc_name, tc_hrs_dur, tesda_course_sector_id, created_at, updated_at) VALUES (13, 'Shielded Metal Arc Welding (SMAW) NC II', 268, 3, '2017-11-16', '2017-11-16');
+SELECT setval('tesda_courses_id_seq', 14, true);
 
 INSERT INTO institutions_tesda_courses (institution_id, tesda_course_id) VALUES (1, 1);
 INSERT INTO institutions_tesda_courses (institution_id, tesda_course_id) VALUES (1, 2);
@@ -91,6 +96,7 @@ INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, u
 INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (20, 'Cornelia', 'Lupin', 'Monogram', 12, '2017-11-16', '2017-11-16');
 
 INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (21, 'Sebastian', 'Ferguson', 'Brackwell', 1, '2017-11-16', '2017-11-16');
+SELECT setval('teachers_id_seq', 22, true);
 
 INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (1, 'Yellow', 25, 2017, 1, 1, 1, '2017-11-16', '2017-11-16');
 INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (2, 'Kamia', 38, 2017, 1, 1, 1, '2017-11-16', '2017-11-16');
@@ -125,6 +131,7 @@ INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, p
 INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (20, 'Kamagong', 23, 2017, 4, 12, 12, '2017-11-16', '2017-11-16');
 
 INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (21, 'Forte', 29, 2017, 1, 1, 1, '2017-11-16', '2017-11-16');
+SELECT setval('sections_id_seq', 22, true);
 
 INSERT INTO teachers_sections (teacher_id, section_id) VALUES (1, 1);
 INSERT INTO teachers_sections (teacher_id, section_id) VALUES (2, 2);

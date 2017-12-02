@@ -19,6 +19,8 @@ VALUES
 	(16,'Caraga Region','2017-11-16','2017-11-16'),
 	(17,'MIMAROPA','2017-11-16','2017-11-16');
 
+SELECT setval('regions_id_seq', 18, true);
+
 INSERT INTO institutions (id, name, inst_class, address_province, address_municipality, address_street_no, cong_distr_num, created_at, updated_at) VALUES (1, 'The Mariam College of Nursing, Inc.', 'HEI', 'Basilan', 'Lamitan City', 'Flores St.', 'Lone', '2017-11-16', '2017-11-16');
 
 INSERT INTO institutions (id, name, inst_class, address_province, address_municipality, address_street_no, cong_distr_num, created_at, updated_at) VALUES (2, 'BENECO Skills Development Training Center', 'TVI', 'Benguet', 'Buguias', 'Bekes, Buyacoaan', 'Lone', '2017-11-16', '2017-11-16');
@@ -42,6 +44,8 @@ INSERT INTO institutions (id, name, inst_class, address_province, address_munici
 INSERT INTO institutions (id, name, inst_class, address_province, address_municipality, address_street_no, cong_distr_num, created_at, updated_at) VALUES (11, 'Aloran Trade High School', 'DepED', 'Misamis Occidental', 'Aloran', '', '1st', '2017-11-16', '2017-11-16');
 
 INSERT INTO institutions (id, name, inst_class, address_province, address_municipality, address_street_no, cong_distr_num, created_at, updated_at) VALUES (12, 'Graciano Institute Academy, Inc.', 'TVI', 'Sarangani-Gensan', 'General Santos City', 'Upper Cahilsot, Calumpang', '1st', '2017-11-16', '2017-11-16');
+
+SELECT setval('institutions_id_seq', 13, true);
 
 INSERT INTO inst_contacts (id, institution_id, contact_num, created_at, updated_at) VALUES (1, 3, 3430292, '2017-11-16', '2017-11-16');
 
@@ -67,6 +71,8 @@ INSERT INTO inst_contacts (id, institution_id, contact_num, created_at, updated_
 
 INSERT INTO inst_contacts (id, institution_id, contact_num, created_at, updated_at) VALUES (15, 12, 09168713891, '2017-11-16', '2017-11-16');
 
+SELECT setval('inst_contacts_id_seq', 16, true);
+
 INSERT INTO regional_data_records
 (region_id,release_date,acadyr,cost_per_stud,private_nonsec,private_sec,"special_HEI",other_govt_schools,ched_supervised_institution,local_colleges_and_uni,"SUCs_main","SUCs_sat",created_at,updated_at)
 VALUES
@@ -87,6 +93,7 @@ VALUES
 (15,'2017-09-20',2012,NULL,49,2,0,6,1,0,4,5,'2017-11-16','2017-11-16'),
 (16,'2017-09-20',2012,15120.26,35,10,0,0,0,1,4,10,'2017-11-16','2017-11-16'),
 (17,'2017-09-20',2012,14490.93,32,9,0,0,0,1,6,43,'2017-11-16','2017-11-16');
+SELECT setval('regional_data_records_id_seq', 18, true);
 
 INSERT INTO faculty_headcounts
 (institution_id,release_date,acadyr_termno,bacc,ms_ma,phd,maintainer,created_at,updated_at)
@@ -103,6 +110,7 @@ VALUES
 (10,'2017-09-20','2012-2013_1',98,138,95,NULL,'2017-11-16','2017-11-16'),
 (11,'2017-09-20','2012-2013_1',60,17,12,NULL,'2017-11-16','2017-11-16'),
 (12,'2017-09-20','2012-2013_1',60,17,9,NULL,'2017-11-16','2017-11-16');
+SELECT setval('faculty_headcounts_id_seq', 13, true);
 
 INSERT INTO tuitions
 (institution_id,release_date,acadyr_termno,bacc,ms_ma,phd,created_at,updated_at)
@@ -119,6 +127,7 @@ VALUES
 (10,'2017-09-20','2012-2013_1',100,150,250,'2017-11-16','2017-11-16'),
 (11,'2017-09-20','2012-2013_1',65,300,NULL,'2017-11-16','2017-11-16'),
 (12,'2017-09-20','2012-2013_1',100,500,NULL,'2017-11-16','2017-11-16');
+SELECT setval('tuitions_id_seq', 13, true);
 
 INSERT INTO data_records
 (institution_id,release_date,acadyr_termno,stud_count,enrolled,graduated,cost_per_stud,created_at,updated_at)
@@ -135,3 +144,4 @@ VALUES
 (10,'2017-09-20','2012-2013_1',NULL,24673,NULL,21882,'2017-11-16','2017-11-16'),
 (11,'2017-09-20','2012-2013_1',NULL,9224,NULL,26708,'2017-11-16','2017-11-16'),
 (12,'2017-09-20','2012-2013_1',NULL,2174,NULL,20503,'2017-11-16','2017-11-16');
+SELECT setval('data_records_id_seq', 13, true);

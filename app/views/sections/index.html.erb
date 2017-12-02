@@ -21,7 +21,7 @@
         <td><%= section.head_count %></td>
         <td><%= section.year %></td>
         <td><%= section.grade_level %></td>
-        <td><%= section.institution %></td>
+        <td><%= section.institution.name %></td>
         <td><%= link_to 'Show', section %></td>
         <td><%= link_to 'Edit', edit_section_path(section) %></td>
         <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>

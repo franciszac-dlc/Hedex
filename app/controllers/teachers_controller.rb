@@ -5,7 +5,7 @@ class TeachersController < ApplicationController
   # GET /teachers
   # GET /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = current_principal.teachers
   end
 
   # GET /teachers/1
@@ -15,7 +15,7 @@ class TeachersController < ApplicationController
 
   # GET /teachers/new
   def new
-    @teacher = Teacher.new
+    @teacher = current_principal.teachers.new
   end
 
   # GET /teachers/1/edit
@@ -25,7 +25,7 @@ class TeachersController < ApplicationController
   # POST /teachers
   # POST /teachers.json
   def create
-    @teacher = Teacher.new(teacher_params)
+    @teacher = current_principal.teachers.new(teacher_params)
 
     respond_to do |format|
       if @teacher.save

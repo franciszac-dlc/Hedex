@@ -37,6 +37,9 @@ Principal.create(id: 10, p_name: 'Anne Asdfghjkl Holmes', email: 'why@yahoo.com'
 Principal.create(id: 11, p_name: 'Candace Alandy Milverton', email: 'cam@yahoo.com', password: 'password')
 Principal.create(id: 12, p_name: 'Sean Arguelles Bellinger', email: 'lastemailpls@yahoo.com', password: 'password')
 
+  # Insert an Admin
+  Admin.create(email: 'admin@hedex.com', password: 'asdfasdfasdf')
+
   # Do the second half of the DML
   sql = File.read('db/dml_2.sql')
   statements = sql.split(/;$/)

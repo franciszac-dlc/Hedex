@@ -1,5 +1,5 @@
 class TesdaCourseSectorsController < ApplicationController
-  before_action :authenticate_principal!
+  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_tesda_course_sector, only: [:show, :edit, :update, :destroy]
 
   # GET /tesda_course_sectors

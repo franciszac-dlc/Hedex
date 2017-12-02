@@ -1,4 +1,5 @@
 class DataRecordsController < ApplicationController
+  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_institution
   before_action :set_data_record, only: [:show, :edit, :update, :destroy]
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171202160530) do
+ActiveRecord::Schema.define(version: 20171203151305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,7 +100,9 @@ ActiveRecord::Schema.define(version: 20171202160530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "p_name"
+    t.bigint "institution_id"
     t.index ["email"], name: "index_principals_on_email", unique: true
+    t.index ["institution_id"], name: "index_principals_on_institution_id"
     t.index ["reset_password_token"], name: "index_principals_on_reset_password_token", unique: true
   end
 
@@ -136,9 +138,7 @@ ActiveRecord::Schema.define(version: 20171202160530) do
     t.bigint "institution_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "principal_id"
     t.index ["institution_id"], name: "index_sections_on_institution_id"
-    t.index ["principal_id"], name: "index_sections_on_principal_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -147,8 +147,8 @@ ActiveRecord::Schema.define(version: 20171202160530) do
     t.string "t_lname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "principal_id"
-    t.index ["principal_id"], name: "index_teachers_on_principal_id"
+    t.bigint "institution_id"
+    t.index ["institution_id"], name: "index_teachers_on_institution_id"
   end
 
   create_table "teachers_sections", force: :cascade do |t|
@@ -197,10 +197,10 @@ ActiveRecord::Schema.define(version: 20171202160530) do
   add_foreign_key "faculty_headcounts", "institutions"
   add_foreign_key "inst_contacts", "institutions"
   add_foreign_key "institutions", "regions"
+  add_foreign_key "principals", "institutions"
   add_foreign_key "regional_data_records", "regions"
   add_foreign_key "sections", "institutions"
-  add_foreign_key "sections", "principals"
-  add_foreign_key "teachers", "principals"
+  add_foreign_key "teachers", "institutions"
   add_foreign_key "tesda_courses", "tesda_course_sectors"
   add_foreign_key "tuitions", "institutions"
 end

@@ -24,18 +24,18 @@ unless Rails.env.production?
   end
 
   # Insert Principal Users
-Principal.create(id: 1, p_name: 'John Ketchum Tablefloorpen', email: 'jktable123@yahoo.com', password: 'password')
-Principal.create(id: 2, p_name: 'Jade Spender Ocampo', email: 'jAdEzz@hotmail.com', password: 'password')
-Principal.create(id: 3, p_name: 'Ash Alandy Peralta', email: 'ashap@gmail.com', password: 'password')
-Principal.create(id: 4, p_name: 'Jake Asdfghjkl Peralta', email: 'holtisarobot@gmail.com', password: 'password')
-Principal.create(id: 5, p_name: 'Sebastian Ketchum Ramirez', email: 'whatanemail@yahoo.com', password: 'password')
-Principal.create(id: 6, p_name: 'Ron Unfakename Mario', email: 'totallyrealemailbro@hotmail.com', password: 'password')
-Principal.create(id: 7, p_name: 'Pauline Dijkstra Doofenshmirtz', email: 'shortestpathtoevil@gmail.com', password: 'password')
-Principal.create(id: 8, p_name: 'Anne Knuth Ablog', email: 'cantthinkofmoreemails@yahoo.com', password: 'password')
-Principal.create(id: 9, p_name: 'Carl Holmes Avelino', email: 'how2writemail@gmail.com', password: 'password')
-Principal.create(id: 10, p_name: 'Anne Asdfghjkl Holmes', email: 'why@yahoo.com', password: 'password')
-Principal.create(id: 11, p_name: 'Candace Alandy Milverton', email: 'cam@yahoo.com', password: 'password')
-Principal.create(id: 12, p_name: 'Sean Arguelles Bellinger', email: 'lastemailpls@yahoo.com', password: 'password')
+Principal.create(institution_id: 1, id: 1, p_name: 'John Ketchum Tablefloorpen', email: 'jktable123@yahoo.com', password: 'password')
+Principal.create(institution_id: 2, id: 2, p_name: 'Jade Spender Ocampo', email: 'jAdEzz@hotmail.com', password: 'password')
+Principal.create(institution_id: 3, id: 3, p_name: 'Ash Alandy Peralta', email: 'ashap@gmail.com', password: 'password')
+Principal.create(institution_id: 4, id: 4, p_name: 'Jake Asdfghjkl Peralta', email: 'holtisarobot@gmail.com', password: 'password')
+Principal.create(institution_id: 5, id: 5, p_name: 'Sebastian Ketchum Ramirez', email: 'whatanemail@yahoo.com', password: 'password')
+Principal.create(institution_id: 6, id: 6, p_name: 'Ron Unfakename Mario', email: 'totallyrealemailbro@hotmail.com', password: 'password')
+Principal.create(institution_id: 7, id: 7, p_name: 'Pauline Dijkstra Doofenshmirtz', email: 'shortestpathtoevil@gmail.com', password: 'password')
+Principal.create(institution_id: 8, id: 8, p_name: 'Anne Knuth Ablog', email: 'cantthinkofmoreemails@yahoo.com', password: 'password')
+Principal.create(institution_id: 9, id: 9, p_name: 'Carl Holmes Avelino', email: 'how2writemail@gmail.com', password: 'password')
+Principal.create(institution_id: 10, id: 10, p_name: 'Anne Asdfghjkl Holmes', email: 'why@yahoo.com', password: 'password')
+Principal.create(institution_id: 11, id: 11, p_name: 'Candace Alandy Milverton', email: 'cam@yahoo.com', password: 'password')
+Principal.create(institution_id: 12, id: 12, p_name: 'Sean Arguelles Bellinger', email: 'lastemailpls@yahoo.com', password: 'password')
 
   # Insert an Admin
   Admin.create(email: 'admin@hedex.com', password: 'asdfasdfasdf')

@@ -2,54 +2,47 @@
 
 <h2>Institution: <%= @institution.name %></h2>
 
-<div class = "container">
+</br>
+<h3> Institution summary</h3>
 
-<table class = "table-bordered stats-table">
+<div class = "container">
+<table class = "table-bordered info-table">
   <tbody>
     <tr>
-      <th>Inst Class</th>
+      <th>Classification</th>
       <td><%= @institution.inst_class %></td>
+    </tr>
+    <tr>
+      <th>Province</th>
+      <td><%= @institution.address_province %></td>
+    </tr>
+    <tr>
+      <th>Municipality</th>
+      <td><%= @institution.address_municipality %></td>
+    </tr>
+    <tr>
+      <th>Street address</th>
+      <td><%= @institution.address_street_no %></td>
+    </tr>
+    <tr>
+      <th>Congressional district number</th>
+      <td><%= @institution.cong_distr_num%></td>
     </tr>
   </tbody>
 </table>
-<p>
-  <strong>Inst class:</strong>
-  <%= @institution.inst_class %>
-</p>
 
-<p>
-  <strong>Address province:</strong>
-  <%= @institution.address_province %>
-</p>
-
-<p>
-  <strong>Address municipality:</strong>
-  <%= @institution.address_municipality %>
-</p>
-
-<p>
-  <strong>Address street no:</strong>
-  <%= @institution.address_street_no %>
-</p>
-
-<p>
-  <strong>Cong distr num:</strong>
-  <%= @institution.cong_distr_num %>
-</p>
 </div>
 
-<div class = "container">
-<%= link_to 'Edit', edit_institution_path(@institution) %> |
-<%= link_to 'Back', institutions_path %>
-</br>
-</div>
-
-<div class = "container">
-
-<%= link_to 'Contacts', [@institution, :inst_contacts] %>
-</br>
+<%= link_to 'Contacts', [@institution, :inst_contacts] %> |
 <%= link_to 'Data Records', [@institution, :data_records] %> |
 <%= link_to 'Tuitions', [@institution, :tuitions] %> |
 <%= link_to 'Faculty Headcounts', [@institution, :faculty_headcounts] %>
-</div>
+
+</br>
+</br>
+
+<%= link_to 'Edit Institution', edit_institution_path(@institution) %> |
+<%= link_to 'Back', institutions_path %>
+
+
 

@@ -25,7 +25,15 @@
           </ul>
           
           <ul class = "nav navbar-nav navbar-right">
+            <% if admin_signed_in? %>
+              <li>
+                <p class = "navbar-text admin-logged-in"> Logged in as admin </p>
+              </li>
+            <% end %>
             <% if principal_signed_in? %>
+              <li>
+                <p class = "navbar-text prin-logged-in"> Logged in as principal </p>
+              </li>
               <li>
               <%= link_to('Logout', destroy_principal_session_path, method: :delete) %>        
               </li>

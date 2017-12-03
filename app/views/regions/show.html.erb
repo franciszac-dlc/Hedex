@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Region name:</strong>
-  <%= @region.region_name %>
-</p>
+<h2>Region: <%= @region.region_name %></h2>
+
+</br>
 
 <%= link_to 'Edit', edit_region_path(@region) %> |
 <%= link_to 'Back', regions_path %> |

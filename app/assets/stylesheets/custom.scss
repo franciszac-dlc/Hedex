@@ -2,13 +2,38 @@
 @import "bootstrap";
 
 
-/* Format for tables that display statistics (aka look almost exactly like
-the tables in the database */
+/* Format for tables that display statistics of a group of entities
+(aka look almost exactly like the tables in the database) */
 .stats-table {
+    margin: 10px;
     th {
         text-align: center;
     }
     th, td {
         padding: 10px;
     }
+}
+
+/* Format for tables that display information about a single entity
+(aka stuff that would turn up in a select statement) */
+.info-table {
+    margin: 10px;
+    th, td {
+        text-align: left;
+        padding: 10px;
+    }
+}
+
+/* Indicators for when logged in as principal or logged in as admin. */
+.navbar-text {
+ &.prin-logged-in {
+     border-radius: 5px;
+     padding: 4px;
+     background-color: yellow;
+ }
+ &.admin-logged-in {
+     border-radius: 5px;
+     padding: 4px;
+     background-color: red;
+ }
 }

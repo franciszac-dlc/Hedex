@@ -4,21 +4,26 @@
   <%= @tesda_course.tc_name %>
 </h1>
 
-<p>
-  <strong>Tc hrs dur:</strong>
-  <%= @tesda_course.tc_hrs_dur %>
-</p>
+</br>
 
-<p>
-  <strong>Tesda course sector:</strong>
-  <%= @tesda_course.tesda_course_sector.tcs_name %>
-</p>
+<h3> TESDA course information </h3>
+
+<table class = "table-bordered info-table">
+  <tr>
+    <th>Duration in hours</th>
+    <td><%= @tesda_course.tc_hrs_dur %></td>
+  </tr>
+  <tr>
+    <th>Course sector</th>
+    <td><%= @tesda_course.tesda_course_sector.tcs_name %></td>
+  </tr>
+</table>
 
 </br>
 
-<h3>Institutions</h3>
+<h3>Institutions offering <%= @tesda_course.tc_name %></h3>
 
-<table>
+<table class = "table-bordered stats-table">
   <thead>
     <tr>
       <th>Name</th>
@@ -48,5 +53,7 @@
   </tbody>
 </table>
 
+</br>
+
 <%= link_to 'Edit', edit_tesda_course_path(@tesda_course) %> |
-<%= link_to 'Back', tesda_courses_path %>
+<%= link_to 'Back', tesda_course_sectors_path %>

@@ -1,5 +1,4 @@
-class RegionalDataRecordsController < ApplicationController
-  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
+class RegionalDataRecordsController < SuperuserController
   before_action :set_region
   before_action :set_regional_data_record, only: [:show, :edit, :update, :destroy]
 

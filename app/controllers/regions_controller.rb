@@ -1,5 +1,4 @@
-class RegionsController < ApplicationController
-  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
+class RegionsController < SuperuserController
   before_action :set_region, only: [:show, :edit, :update, :destroy]
 
   # GET /regions

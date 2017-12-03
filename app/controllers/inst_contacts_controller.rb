@@ -1,5 +1,4 @@
-class InstContactsController < ApplicationController
-  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
+class InstContactsController < SuperuserController
   before_action :set_institution
   before_action :set_inst_contact, only: [:show, :edit, :update, :destroy]
 

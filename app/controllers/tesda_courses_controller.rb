@@ -1,5 +1,4 @@
-class TesdaCoursesController < ApplicationController
-  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
+class TesdaCoursesController < SuperuserController
   before_action :set_tesda_course, only: [:show, :edit, :update, :destroy]
 
   # GET /tesda_courses

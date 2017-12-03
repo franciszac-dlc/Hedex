@@ -1,3 +1,3 @@
 class TesdaCourseSector < ApplicationRecord
-  has_many :tesda_courses
+  has_many :tesda_courses, dependent: :delete_all
 end

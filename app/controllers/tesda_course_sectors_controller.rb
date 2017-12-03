@@ -10,6 +10,7 @@ class TesdaCourseSectorsController < ApplicationController
   # GET /tesda_course_sectors/1
   # GET /tesda_course_sectors/1.json
   def show
+    @tesda_courses = @tesda_course_sector.tesda_courses
   end
 
   # GET /tesda_course_sectors/new

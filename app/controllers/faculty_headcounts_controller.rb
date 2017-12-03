@@ -1,4 +1,4 @@
-class FacultyHeadcountsController < ApplicationController
+class FacultyHeadcountsController < SuperuserController
   before_action :set_institution
   before_action :set_faculty_headcount, only: [:show, :edit, :update, :destroy]
 

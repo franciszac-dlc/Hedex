@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   resources :institutions do
     resources :data_records, :tuitions, :faculty_headcounts, :inst_contacts
   end

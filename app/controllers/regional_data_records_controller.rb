@@ -1,4 +1,4 @@
-class RegionalDataRecordsController < ApplicationController
+class RegionalDataRecordsController < SuperuserController
   before_action :set_region
   before_action :set_regional_data_record, only: [:show, :edit, :update, :destroy]
 

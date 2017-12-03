@@ -1,4 +1,4 @@
-class TuitionsController < ApplicationController
+class TuitionsController < SuperuserController
   before_action :set_institution
   before_action :set_tuition, only: [:show, :edit, :update, :destroy]
 

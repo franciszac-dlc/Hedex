@@ -1,4 +1,4 @@
-class InstContactsController < ApplicationController
+class InstContactsController < SuperuserController
   before_action :set_institution
   before_action :set_inst_contact, only: [:show, :edit, :update, :destroy]
 

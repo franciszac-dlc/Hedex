@@ -1,4 +1,4 @@
-class RegionsController < ApplicationController
+class RegionsController < SuperuserController
   before_action :set_region, only: [:show, :edit, :update, :destroy]
 
   # GET /regions

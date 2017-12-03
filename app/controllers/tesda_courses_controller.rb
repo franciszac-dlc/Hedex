@@ -1,4 +1,4 @@
-class TesdaCoursesController < ApplicationController
+class TesdaCoursesController < SuperuserController
   before_action :set_tesda_course, only: [:show, :edit, :update, :destroy]
 
   # GET /tesda_courses

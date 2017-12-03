@@ -29,6 +29,9 @@
               <li>
                 <p class = "navbar-text admin-logged-in"> Logged in as admin </p>
               </li>
+              <li>
+                <%= link_to('Logout (Admin)', destroy_admin_session_path, method: :delete) %>
+              </li>
             <% end %>
             <% if principal_signed_in? %>
               <li>

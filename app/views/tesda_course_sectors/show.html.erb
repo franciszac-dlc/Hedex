@@ -49,6 +49,7 @@
 </br>
 
 <% if admin_signed_in? %>
+<%= link_to 'New TESDA Course', new_tesda_course_path %> |
 <%= link_to 'Edit course sector', edit_tesda_course_sector_path(@tesda_course_sector) %> |
 <% end %>
 <%= link_to 'Back', tesda_course_sectors_path %>

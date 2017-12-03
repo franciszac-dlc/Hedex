@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= form.collection_select :region_id, Region.all, :id, :region_name, prompt: true %>
+  </div>
+
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :institution_name %>
   </div>

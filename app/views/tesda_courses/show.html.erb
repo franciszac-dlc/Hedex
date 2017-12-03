@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Tc name:</strong>
+<h1>
   <%= @tesda_course.tc_name %>
-</p>
+</h1>
 
 <p>
   <strong>Tc hrs dur:</strong>
@@ -12,8 +11,42 @@
 
 <p>
   <strong>Tesda course sector:</strong>
-  <%= @tesda_course.tesda_course_sector %>
+  <%= @tesda_course.tesda_course_sector.tcs_name %>
 </p>
+
+</br>
+
+<h3>Institutions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Inst class</th>
+      <th>Address province</th>
+      <th>Address municipality</th>
+      <th>Address street no</th>
+      <th>Cong distr num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @institutions.each do |institution| %>
+      <tr>
+        <td><%= institution.name %></td>
+        <td><%= institution.inst_class %></td>
+        <td><%= institution.address_province %></td>
+        <td><%= institution.address_municipality %></td>
+        <td><%= institution.address_street_no %></td>
+        <td><%= institution.cong_distr_num %></td>
+        <td><%= link_to 'Show', institution %></td>
+        <td><%= link_to 'Edit', edit_institution_path(institution) %></td>
+        <td><%= link_to 'Destroy', institution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_tesda_course_path(@tesda_course) %> |
 <%= link_to 'Back', tesda_courses_path %>

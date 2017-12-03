@@ -32,7 +32,11 @@
       <th>Address municipality</th>
       <th>Address street no</th>
       <th>Cong distr num</th>
-      <th colspan="3"></th>
+      <% if admin_signed_in? %>
+        <th colspan="3"></th>
+      <% else %>
+        <th colspan="1"></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -46,8 +50,10 @@
         <td><%= institution.address_street_no %></td>
         <td><%= institution.cong_distr_num %></td>
         <td><%= link_to 'Show', institution %></td>
+      <% if admin_signed_in? %>
         <td><%= link_to 'Edit', edit_institution_path(institution) %></td>
         <td><%= link_to 'Destroy', institution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -55,5 +61,7 @@
 
 </br>
 
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_tesda_course_path(@tesda_course) %> |
+<% end %>
 <%= link_to 'Back', tesda_course_sectors_path %>

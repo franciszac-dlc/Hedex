@@ -10,5 +10,7 @@
   <%= @inst_contact.contact_num %>
 </p>
 
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_institution_inst_contact_path(@institution, @inst_contact) %> |
+<% end %>
 <%= link_to 'Back', institution_inst_contacts_path %>

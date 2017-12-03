@@ -24,7 +24,11 @@
     <tr>
       <th>Course Name</th>
       <th>Duration in hours</th>
-      <th colspan="3"></th>
+      <% if admin_signed_in? %>
+        <th colspan="3"></th>
+      <% else %>
+        <th colspan="1"></th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -33,8 +37,10 @@
         <td><%= tesda_course.tc_name %></td>
         <td><%= tesda_course.tc_hrs_dur %></td>
         <td><%= link_to 'Show course', tesda_course %></td>
+      <% if admin_signed_in? %>
         <td><%= link_to 'Edit course', edit_tesda_course_path(tesda_course) %></td>
         <td><%= link_to 'Destroy course', tesda_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -42,5 +48,7 @@
 
 </br>
 
+<% if admin_signed_in? %>
 <%= link_to 'Edit course sector', edit_tesda_course_sector_path(@tesda_course_sector) %> |
+<% end %>
 <%= link_to 'Back', tesda_course_sectors_path %>

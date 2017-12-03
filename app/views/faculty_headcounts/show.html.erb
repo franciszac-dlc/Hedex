@@ -35,5 +35,7 @@
   <%= @faculty_headcount.maintainer %>
 </p>
 
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_institution_faculty_headcount_path(@institution, @faculty_headcount) %> |
+<% end %>
 <%= link_to 'Back', institution_faculty_headcounts_path %>

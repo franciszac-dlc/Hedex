@@ -19,7 +19,11 @@
       <th>Local colleges and universities</th>
       <th>SUCs main</th>
       <th>SUCs sat</th>
-      <th colspan="3"></th>
+      <% if admin_signed_in? %>
+        <th colspan="3"></th>
+      <% else %>
+        <th colspan="1"></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -38,8 +42,10 @@
         <td><%= regional_data_record.SUCs_main %></td>
         <td><%= regional_data_record.SUCs_sat %></td>
         <td><%= link_to 'Show', [@region, regional_data_record] %></td>
+      <% if admin_signed_in? %>
         <td><%= link_to 'Edit', edit_region_regional_data_record_path(@region, regional_data_record) %></td>
         <td><%= link_to 'Destroy', [@region, regional_data_record], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -47,5 +53,7 @@
 
 <br>
 
+<% if admin_signed_in? %>
 <%= link_to 'New Regional Data Record', new_region_regional_data_record_path %> |
+<% end %>
 <%= link_to 'Back', @region %>

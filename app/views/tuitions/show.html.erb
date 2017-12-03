@@ -30,5 +30,7 @@
   <%= @tuition.phd %>
 </p>
 
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_institution_tuition_path(@institution, @tuition) %> |
+<% end %>
 <%= link_to 'Back', institution_tuitions_path %>

@@ -4,6 +4,8 @@
 
 </br>
 
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_region_path(@region) %> |
+<% end %>
 <%= link_to 'Back', regions_path %> |
 <%= link_to 'Show statistics', [@region, :regional_data_records] %>

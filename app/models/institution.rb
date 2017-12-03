@@ -6,4 +6,6 @@ class Institution < ApplicationRecord
   has_many :inst_contacts, dependent: :delete_all
   has_and_belongs_to_many :tesda_courses
   has_many :sections, dependent: :delete_all
+  has_many :teachers, dependent: :delete_all
+  has_many :principals, dependent: :delete_all
 end

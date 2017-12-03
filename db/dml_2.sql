@@ -63,74 +63,74 @@ INSERT INTO institutions_tesda_courses (institution_id, tesda_course_id) VALUES 
 
 INSERT INTO institutions_tesda_courses (institution_id, tesda_course_id) VALUES (12, 13);
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (1, 'Emelia', 'Nadal', 'Gogh', 1, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (2, 'Ron', 'Hope', 'Toralba', 1, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (3, 'Miyo', 'Park', 'Flores', 1, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (1, 'Emelia', 'Nadal', 'Gogh', 1, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (2, 'Ron', 'Hope', 'Toralba', 1, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (3, 'Miyo', 'Park', 'Flores', 1, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (4, 'Carl', 'Magsaysay', 'Hope', 2, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (4, 'Carl', 'Magsaysay', 'Hope', 2, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (5, 'Augustus', 'dela Cruz', 'dela Cruz', 3, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (5, 'Augustus', 'dela Cruz', 'dela Cruz', 3, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (6, 'Michelle', 'Milverton', 'Feynman', 4, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (6, 'Michelle', 'Milverton', 'Feynman', 4, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (7, 'Malia', 'Villalobo', 'Ferguson', 5, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (8, 'Luigi', 'Fletcher', 'Figueroa', 5, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (7, 'Malia', 'Villalobo', 'Ferguson', 5, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (8, 'Luigi', 'Fletcher', 'Figueroa', 5, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (9, 'Betty', 'Gogh', 'Nadal', 6, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (10, 'Lawrence', 'Sagan', 'Potter', 6, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (11, 'Philip', 'Bernardo', 'Egbert', 6, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (12, 'Mario', 'Strider', 'Nadal', 6, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (9, 'Betty', 'Gogh', 'Nadal', 6, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (10, 'Lawrence', 'Sagan', 'Potter', 6, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (11, 'Philip', 'Bernardo', 'Egbert', 6, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (12, 'Mario', 'Strider', 'Nadal', 6, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (13, 'Glibert', 'Ketchum', 'Ravache', 7, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (14, 'Jacintha', 'Backwater', 'Ramsden', 7, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (13, 'Glibert', 'Ketchum', 'Ravache', 7, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (14, 'Jacintha', 'Backwater', 'Ramsden', 7, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (15, 'Carl', 'Paget', 'Moriarty', 8, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (15, 'Carl', 'Paget', 'Moriarty', 8, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (16, 'Candace', 'Avelino', 'Brackwell', 9, '2017-11-16', '2017-11-16');
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (17, 'Rafael', 'Stone', 'Unfakename', 9, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (16, 'Candace', 'Avelino', 'Brackwell', 9, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (17, 'Rafael', 'Stone', 'Unfakename', 9, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (18, 'Jacintha', 'Klein', 'Feynman', 10, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (18, 'Jacintha', 'Klein', 'Feynman', 10, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (19, 'Catleya', 'dela Cruz', 'Obama', 11, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (19, 'Catleya', 'dela Cruz', 'Obama', 11, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (20, 'Cornelia', 'Lupin', 'Monogram', 12, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (20, 'Cornelia', 'Lupin', 'Monogram', 12, '2017-11-16', '2017-11-16');
 
-INSERT INTO teachers (id, t_fname, t_mname, t_lname, principal_id, created_at, updated_at) VALUES (21, 'Sebastian', 'Ferguson', 'Brackwell', 1, '2017-11-16', '2017-11-16');
+INSERT INTO teachers (id, t_fname, t_mname, t_lname, institution_id, created_at, updated_at) VALUES (21, 'Sebastian', 'Ferguson', 'Brackwell', 1, '2017-11-16', '2017-11-16');
 SELECT setval('teachers_id_seq', 22, true);
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (1, 'Yellow', 25, 2017, 1, 1, 1, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (2, 'Kamia', 38, 2017, 1, 1, 1, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (3, 'Yakal', 29, 2017, 1, 1, 1, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (1, 'Yellow', 25, 2017, 1, 1, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (2, 'Kamia', 38, 2017, 1, 1, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (3, 'Yakal', 29, 2017, 1, 1, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (4, 'Kamia', 28, 2017, 1, 2, 2, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (4, 'Kamia', 28, 2017, 1, 2, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (5, 'Kalayaan', 31, 2017, 2, 3, 3, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (5, 'Kalayaan', 31, 2017, 2, 3, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (6, 'Brio', 31, 2017, 3, 4, 4, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (6, 'Brio', 31, 2017, 3, 4, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (7, 'Ilang-Ilang', 40, 2017, 3, 5, 5, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (8, 'Sol', 37, 2017, 2, 5, 5, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (7, 'Ilang-Ilang', 40, 2017, 3, 5, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (8, 'Sol', 37, 2017, 2, 5, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (9, 'Forte', 28, 2017, 4, 6, 6, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (10, 'Vivace', 31, 2017, 3, 6, 6, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (11, 'Ritenuto', 40, 2017, 5, 6, 6, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (12, 'Ipil', 34, 2017, 4, 6, 6, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (9, 'Forte', 28, 2017, 4, 6, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (10, 'Vivace', 31, 2017, 3, 6, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (11, 'Ritenuto', 40, 2017, 5, 6, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (12, 'Ipil', 34, 2017, 4, 6, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (13, 'Ritenuto', 34, 2017, 1, 7, 7, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (14, 'Red', 40, 2017, 2, 7, 7, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (13, 'Ritenuto', 34, 2017, 1, 7, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (14, 'Red', 40, 2017, 2, 7, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (15, 'Kalayaan', 21, 2017, 5, 8, 8, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (15, 'Kalayaan', 21, 2017, 5, 8, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (16, 'Kamagong', 25, 2017, 4, 9, 9, '2017-11-16', '2017-11-16');
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (17, 'Red', 35, 2017, 3, 9, 9, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (16, 'Kamagong', 25, 2017, 4, 9, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (17, 'Red', 35, 2017, 3, 9, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (18, 'Pink', 39, 2017, 2, 10, 10, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (18, 'Pink', 39, 2017, 2, 10, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (19, 'Kamia', 32, 2017, 3, 11, 11, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (19, 'Kamia', 32, 2017, 3, 11, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (20, 'Kamagong', 23, 2017, 4, 12, 12, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (20, 'Kamagong', 23, 2017, 4, 12, '2017-11-16', '2017-11-16');
 
-INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, principal_id, created_at, updated_at) VALUES (21, 'Forte', 29, 2017, 1, 1, 1, '2017-11-16', '2017-11-16');
+INSERT INTO sections (id, name, head_count, year, grade_level, institution_id, created_at, updated_at) VALUES (21, 'Forte', 29, 2017, 1, 1, '2017-11-16', '2017-11-16');
 SELECT setval('sections_id_seq', 22, true);
 
 INSERT INTO teachers_sections (teacher_id, section_id) VALUES (1, 1);

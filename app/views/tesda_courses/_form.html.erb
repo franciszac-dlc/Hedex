@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :tesda_course_sector_id %>
-    <%= form.text_field :tesda_course_sector_id, id: :tesda_course_tesda_course_sector_id %>
+    <%= form.collection_select :tesda_course_sector_id, TesdaCourseSector.all, :id, :tcs_name, prompt: true %>
   </div>
 
   <div class="actions">

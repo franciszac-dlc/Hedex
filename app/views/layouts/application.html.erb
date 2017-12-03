@@ -22,6 +22,14 @@
             <li>
             <%= link_to('Region Records', regions_path) %>
             </li>
+            <% if principal_signed_in? %>
+            <li>
+            <%= link_to('Section Set', sections_path) %>
+            </li>
+            <li>
+            <%= link_to('Teacher Tracklist', teachers_path) %>
+            </li>
+            <% end %>
           </ul>
           
           <ul class = "nav navbar-nav navbar-right">

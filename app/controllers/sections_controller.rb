@@ -5,7 +5,7 @@ class SectionsController < ApplicationController
   # GET /sections
   # GET /sections.json
   def index
-    @sections = current_principal.sections.all
+    @sections = current_principal.institution.sections.all
   end
 
   # GET /sections/1
@@ -15,7 +15,7 @@ class SectionsController < ApplicationController
 
   # GET /sections/new
   def new
-    @section = current_principal.sections.new
+    @section = current_principal.institution.sections.new
   end
 
   # GET /sections/1/edit
@@ -25,7 +25,7 @@ class SectionsController < ApplicationController
   # POST /sections
   # POST /sections.json
   def create
-    @section = current_principal.sections.new(section_params)
+    @section = current_principal.institution.sections.new(section_params)
 
     respond_to do |format|
       if @section.save

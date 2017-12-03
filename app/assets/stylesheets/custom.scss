@@ -1,0 +1,14 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* Format for tables that display statistics (aka look almost exactly like
+the tables in the database */
+.stats-table {
+    th {
+        text-align: center;
+    }
+    th, td {
+        padding: 10px;
+    }
+}

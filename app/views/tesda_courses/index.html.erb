@@ -2,7 +2,7 @@
 
 <h1>Tesda Courses</h1>
 
-<table>
+<table = "table-bordered stats-table">
   <thead>
     <tr>
       <th>Tc name</th>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= tesda_course.tc_name %></td>
         <td><%= tesda_course.tc_hrs_dur %></td>
-        <td><%= tesda_course.tesda_course_sector %></td>
+        <td><%= tesda_course.tesda_course_sector.tcs_name %></td>
         <td><%= link_to 'Show', tesda_course %></td>
         <td><%= link_to 'Edit', edit_tesda_course_path(tesda_course) %></td>
         <td><%= link_to 'Destroy', tesda_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -9,8 +9,35 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <header class = "navbar navbar-inverse">
+      <div class = "container">
+        <nav>
+          <ul class = "nav navbar-nav navbar-left">
+            <li>
+            <%= link_to('Institutions Index', institutions_path) %> 
+            </li>
+            <li>
+            <%= link_to('TESDA Tracker', tesda_course_sectors_path) %>
+            </li>
+            <li>
+            <%= link_to('Region Records', regions_path) %>
+            </li>
+          </ul>
+          
+          <ul class = "nav navbar-nav navbar-right">
+            <% if principal_signed_in? %>
+              <li>
+              <%= link_to('Logout', destroy_principal_session_path, method: :delete) %>        
+              </li>
+            <% else %>
+              <li>
+              <%= link_to('Login as Principal', new_principal_session_path)  %>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
